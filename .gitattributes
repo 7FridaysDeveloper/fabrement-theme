@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.woff2 binary
+
+# Kept out of the release zip (git archive).
+README.md export-ignore
+.gitattributes export-ignore

@@ -1,0 +1,330 @@
+/* Welcome page (home.php). Loaded only there. */
+
+@font-face {
+	font-family: "Oxanium";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/oxanium-400-latin-ext.woff2") format("woff2");
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+	font-family: "Oxanium";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/oxanium-400-latin.woff2") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/montserrat-700-latin-ext.woff2") format("woff2");
+	unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("../fonts/montserrat-700-latin.woff2") format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body.fabrement-welcome {
+	margin: 0;
+	background: #2e3442;
+}
+
+.fw {
+	--fw-bg: #2e3442;
+	--fw-green: #2cc486;
+	--fw-green-dark: #25a873;
+	--fw-text: #fff;
+	--fw-muted: #b3b3b3;
+	--fw-step-bg: #343b4b;
+	--fw-step-border: #595f6d;
+	--fw-font-display: "Oxanium", sans-serif;
+	--fw-font-btn: "Gotham Pro", "Montserrat", Arial, sans-serif;
+	--fw-font-body: Arial, Helvetica, sans-serif;
+
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 80px 16px;
+	background: var(--fw-bg);
+	color: var(--fw-text);
+	font-family: var(--fw-font-body);
+	-webkit-font-smoothing: antialiased;
+}
+
+.fw,
+.fw *,
+.fw *::before,
+.fw *::after {
+	box-sizing: border-box;
+}
+
+.fw h1,
+.fw p,
+.fw ol,
+.fw li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Admin bar takes its height off the screen. */
+.admin-bar .fw {
+	min-height: calc(100vh - 32px);
+}
+
+.fw-deco {
+	position: absolute;
+	z-index: 0;
+	display: block;
+	max-width: 30%;
+	height: auto;
+	pointer-events: none;
+	user-select: none;
+}
+
+.fw-deco--top {
+	top: 0;
+	right: 0;
+	width: 536px;
+}
+
+.fw-deco--bottom {
+	bottom: 0;
+	left: 0;
+	width: 347.5px;
+}
+
+.fw-box {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 854px;
+	text-align: center;
+	animation: fw-in 0.6s ease-out both;
+}
+
+.fw-logo {
+	display: block;
+	width: 246px;
+	height: auto;
+}
+
+.fw .fw-title {
+	margin-top: 33px;
+	color: var(--fw-text);
+	font-family: var(--fw-font-display);
+	font-size: 68px;
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+.fw-lead,
+.fw-note {
+	max-width: 500px;
+	color: var(--fw-muted);
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.fw .fw-lead {
+	margin-top: 17px;
+}
+
+.fw .fw-note {
+	margin-top: 30px;
+}
+
+.fw-note a {
+	color: var(--fw-green);
+	text-decoration: none;
+}
+
+.fw-note a:hover {
+	text-decoration: underline;
+}
+
+.fw-actions {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	width: 100%;
+	max-width: 546.5px;
+	margin-top: 35px;
+}
+
+.fw-actions--single {
+	grid-template-columns: auto;
+	justify-content: center;
+}
+
+.fw-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	height: 50px;
+	padding: 15px 35px;
+	border: 1px solid var(--fw-green);
+	border-radius: 60px;
+	font-family: var(--fw-font-btn);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.fw-btn svg {
+	flex: none;
+	width: 20px;
+	height: 20px;
+}
+
+.fw-btn--primary {
+	background: var(--fw-green);
+	color: #fff;
+}
+
+.fw-btn--primary:hover {
+	border-color: var(--fw-green-dark);
+	background: var(--fw-green-dark);
+	color: #fff;
+}
+
+.fw-btn--outline {
+	background: transparent;
+	color: var(--fw-green);
+}
+
+.fw-btn--outline:hover {
+	background: rgba(44, 196, 134, 0.1);
+	color: var(--fw-green);
+}
+
+.fw-btn:focus-visible,
+.fw a:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 3px;
+}
+
+.fw .fw-steps {
+	display: flex;
+	align-items: center;
+	gap: 22px;
+	margin-top: 107px;
+	list-style: none;
+}
+
+.fw-steps__item {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.fw-steps__num {
+	display: grid;
+	place-items: center;
+	width: 54px;
+	height: 54px;
+	border: 1px solid var(--fw-step-border);
+	border-radius: 10px;
+	background: var(--fw-step-bg);
+	font-family: var(--fw-font-display);
+	font-size: 22px;
+	line-height: 33px;
+}
+
+.fw-steps__label {
+	font-family: var(--fw-font-display);
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.fw-steps__arrow {
+	display: flex;
+	flex: none;
+}
+
+@keyframes fw-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media (max-width: 900px) {
+	.fw .fw-title {
+		font-size: 44px;
+	}
+
+	.fw .fw-steps {
+		margin-top: 64px;
+	}
+
+	.fw-deco {
+		opacity: 0.6;
+	}
+}
+
+@media (max-width: 782px) {
+	.admin-bar .fw {
+		min-height: calc(100vh - 46px);
+	}
+}
+
+@media (max-width: 600px) {
+	.fw .fw-title {
+		font-size: 34px;
+	}
+
+	.fw .fw-lead,
+	.fw .fw-note {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.fw-actions {
+		grid-template-columns: 1fr;
+	}
+
+	.fw .fw-steps {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+		margin-top: 48px;
+	}
+
+	.fw-steps__arrow {
+		margin-left: 13px;
+		transform: rotate(90deg);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fw-box {
+		animation: none;
+	}
+
+	.fw-btn {
+		transition: none;
+	}
+}
