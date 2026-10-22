@@ -61,7 +61,7 @@ header.php           <head>, wp_head(), <body>, wp_body_open()
 footer.php           wp_footer()
 index.php            fallback: single entry or a list with pagination
 home.php             the welcome page (falls back to index.php when not the front page)
-screenshot.png       1200×900 picture for Appearance → Themes
+screenshot.jpg       picture for Appearance → Themes (4:3)
 assets/css/welcome.css   welcome page styles, loaded only there
 assets/fonts/        Oxanium 400 and Montserrat 700 (woff2, latin + latin-ext), OFL licenses
 assets/images/       logo and decorative shapes of the welcome page
@@ -75,8 +75,8 @@ first (fabrement.com's font, commercial, not bundled) and fall back to Montserra
 
 ## Screenshot
 
-`screenshot.png` is a 1200×900 capture of the welcome page (admin view, admin bar hidden). To
-change it, replace the file with any 1200×900 PNG or JPG.
+`screenshot.jpg` is the picture on the theme's card in Appearance → Themes. To
+change it, replace the file with another 4:3 image (WordPress recommends 1200×900).
 
 ## Releasing
 
