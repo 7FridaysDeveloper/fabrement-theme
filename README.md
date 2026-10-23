@@ -8,6 +8,10 @@ The plugin draws the pages (templates, blocks, headers, footers); the theme only
 - Text domain: `fabrement-theme`
 - License: GPL-2.0-or-later
 
+[![Claude Design to WordPress: HTML Export to Gutenberg Blocks in Under 2 Hours](https://img.youtube.com/vi/swOd_r8PwNQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=swOd_r8PwNQ&t=44s)
+
+▶ [Claude Design to WordPress: HTML Export to Gutenberg Blocks in Under 2 Hours](https://www.youtube.com/watch?v=swOd_r8PwNQ&t=44s) (YouTube)
+
 ## Installing
 
 **From the plugin.** The full Fabrement plugin shows administrators a notice on its own admin
