@@ -1,5 +1,3 @@
-<p align="center"><a href="https://fabrement.com/"><img src=".github/fabrement-logo.png" alt="Fabrement" width="420"></a></p>
-
 # Fabrement Base
 
 A minimal classic WordPress theme for sites built with the [Fabrement](https://fabrement.com/) plugin.

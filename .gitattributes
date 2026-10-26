@@ -5,4 +5,3 @@
 # Kept out of the release zip (git archive).
 README.md export-ignore
 .gitattributes export-ignore
-.github export-ignore
